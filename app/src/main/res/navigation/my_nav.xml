@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/introPage">
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.frontenduidesign.login_fragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/homeScreen3"
+        android:name="com.example.frontenduidesign.HomeScreen"
+        android:label="home_screen_frag"
+        tools:layout="@layout/home_screen_frag" >
+        <action
+            android:id="@+id/action_homeScreen3_to_login_fragment"
+            app:destination="@id/login_fragment" />
+        <action
+            android:id="@+id/action_homeScreen3_to_createAccount_Fragment2"
+            app:destination="@id/createAccount_Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccount_Fragment2"
+        android:name="com.example.frontenduidesign.createAccount_Fragment"
+        android:label="create_account_frag"
+        tools:layout="@layout/create_account_frag" />
+    <fragment
+        android:id="@+id/introPage"
+        android:name="com.example.frontenduidesign.introPage"
+        android:label="intro_page_grag"
+        tools:layout="@layout/intro_page_grag" >
+        <action
+            android:id="@+id/action_introPage_to_homeScreen3"
+            app:destination="@id/homeScreen3" />
+    </fragment>
+</navigation>

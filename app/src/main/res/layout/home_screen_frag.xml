@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFB"
+    tools:context=".HomeScreen">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F8FAFB"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="322dp"
+            android:layout_height="228dp"
+            android:layout_alignParentTop="true"
+            android:elevation="4dp"
+            android:src="@drawable/best"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="228dp"
+            android:layout_height="51dp"
+            android:fontFamily="@font/inder"
+            android:text="WELCOME!"
+            android:textAlignment="center"
+            android:textColor="#4DB6AC"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/image_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/loremText"
+            android:layout_width="374dp"
+            android:layout_height="124dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/droid_sans"
+            android:text="Lorem ipsum dolor sit amet, consectetur \nadipiscing elit. Purus, sit ac euismod \namet mi ante pretium euismod. \nTempus porttitor nisl consectetur eu praesent\n adipiscing felis metus. Nec felis sed nunc leo vitae justo, \namet scelerisque. Proin elementum faucibus nunc in integer nibh faucibus."
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/LoginButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_1" />
+
+        <Button
+            android:id="@+id/LoginButton"
+            style="@style/greenButton"
+            android:layout_width="220dp"
+            android:layout_height="38dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/login_now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loremText" />
+
+        <Button
+            android:id="@+id/CreateButton"
+            android:layout_width="220dp"
+            android:layout_height="38dp"
+            android:layout_margin="15dp"
+            android:text="@string/create_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LoginButton"
+            android:background="@drawable/white_btn_bg"
+            style="@style/whiteButton"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
